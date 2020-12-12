@@ -26,7 +26,7 @@ function getSteps() {
     return ['Enter First Name', 'Enter Last Name', 'Enter Email'];
 }
 
-function getStepContent(stepIndex: number, handleNext: () => void ) {
+function getStepContent(stepIndex: number, handleNext: () => void) {
     switch (stepIndex) {
         case 0:
             return <Form1 handleNext={handleNext} />

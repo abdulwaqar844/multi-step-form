@@ -5,7 +5,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { Form1 } from "./Form/Form1";
+import  Form1  from "./Form/Form1";
 import { Form2 } from "./Form/Form2";
 import { Form3 } from "./Form/Form3";
 
@@ -44,7 +44,6 @@ export default function StepperForm() {
     const steps = getSteps();
     const handleNext = () => {
         console.log("Clicking Next ")
-
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
     };
     const handleBack = () => {
@@ -70,17 +69,19 @@ export default function StepperForm() {
                     </div>
                 ) : (
                         <div>
-                            <Typography  className={classes.instructions}>{getStepContent(activeStep, handleNext)}</Typography>
-                            <div>
-                                <Button
+                            <Typography className={classes.instructions}>{getStepContent(activeStep,handleNext)}</Typography>
+                            
+                                
+                                <div><Button
                                     disabled={activeStep === 0}
                                     onClick={handleBack}
                                     className={classes.backButton}
                                 >
                                     Back
                                  </Button>
-
-                            </div>
+                                 </div>
+                                
+                            
                         </div>
                     )}
             </div>

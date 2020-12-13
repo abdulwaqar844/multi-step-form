@@ -15,7 +15,7 @@ const Form1: React.FC<(Props)> = ({ handleNext }) => {
 
             validationSchema={Yup.object({
                 firstName: Yup.string()
-                .min(3,"Less then 3 characters")
+                    .min(3, "Less then 3 characters")
                     .max(15, 'Must be 15 characters or less')
                     .required('Required')
             })}
@@ -29,7 +29,7 @@ const Form1: React.FC<(Props)> = ({ handleNext }) => {
         >
             <Form >
                 <label htmlFor="firstName">First Name</label>
-                <Field name="firstName" placeholder="First Name" type="text" />
+                <Field name="firstName" placeholder="First Name" type="text" autoFocus />
                 <ErrorMessage name="firstName" />
                 <br />
                 <button type="submit" >Submit</button>

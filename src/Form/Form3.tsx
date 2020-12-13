@@ -36,7 +36,7 @@ export const Form3: React.FC<(Props)> = ({ handleNext }) => {
         >
             <Form>
                 <label htmlFor="email">Email</label>
-                <Field name="email" placeholder="Email" />
+                <Field name="email" placeholder="Email" type="text" autoFocus />
                 <ErrorMessage name="email" />
                 <br />
                 <button type="submit" >Submit </button>

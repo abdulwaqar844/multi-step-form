@@ -33,9 +33,8 @@ export const Form2: React.FC<(Props)> = ({ handleNext }) => {
             }}
         >
             <Form>
-            <label htmlFor="lastname">Last Name</label>
-
-                <Field name="lastname" placeholder="Last Name" type="text" />
+                <label htmlFor="lastname">Last Name</label>
+                <Field name="lastname" placeholder="Last Name" type="text" autoFocus />
                 <ErrorMessage name="lastname" />
                 <br />
                 <button type="submit" >Submit</button>
